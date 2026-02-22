@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --text: #1a2433;
+  --muted: #5a6a7f;
+  --snake: #8b5cf6;
+  --snake-head: #6d28d9;
+  --food: #e63946;
+  --grid: #dce5f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #ffffff, var(--bg));
+  color: var(--text);
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+.app {
+  width: min(92vw, 520px);
+  background: var(--panel);
+  border: 1px solid #d9e2ee;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(17, 31, 51, 0.12);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.hud {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.hud p {
+  margin: 0;
+  color: var(--muted);
+}
+
+#board {
+  width: 100%;
+  height: auto;
+  border: 1px solid #c8d3e2;
+  background: #fbfdff;
+  border-radius: 8px;
+  display: block;
+  touch-action: none;
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.checkbox-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.level-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+select {
+  appearance: none;
+  border: 1px solid #c8d3e2;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  padding: 8px 28px 8px 10px;
+  cursor: pointer;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.controls p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+#status {
+  color: var(--text);
+  font-weight: 600;
+}
